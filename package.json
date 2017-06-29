@@ -1,0 +1,17 @@
+{
+  "name": "mlinjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.6",
+    "ml-regression": "^4.2.1",
+    "ramda": "^0.24.1",
+    "ramda-fantasy": "^0.8.0"
+  }
+}
