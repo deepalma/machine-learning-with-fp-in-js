@@ -80,10 +80,10 @@ const program = (csvFilePath, prop1, prop2) =>
     // Future e RegressionModel
 
     .map(predict)
-    // Future (Future Answer -> Future Tuple Answer Prediction)
+    // Future (Future Number -> Future Tuple Number Number)
 
     .chain(x => x(askUserInput('Enter input X for prediction (Press CTRL+C to exit) : \n')))
-    // Future Tuple Answer Prediction
+    // Future Tuple Number Number
 
     .map(x => printPrediction(Tuple.snd(x))(Tuple.fst(x))).chain(IOToFuture);
     // Future ()
