@@ -40,7 +40,7 @@ const printRegressionModel = regressionModel => IO(() => {
 
 // RegressionModel -> Future Number -> Future Tuple Number Number
 const predict = regressionModel => userInput => {
-  return userInput.map(x => Tuple(x, regressionModel.predict(x)))
+  return userInput.map(x => Tuple(x, regressionModel.predict(x)));
 };
 
 // String -> Future Number
@@ -55,7 +55,7 @@ const askUserInput = (text) => {
     rl.question(text, input => {
       const parsedInput = parseFloat(input);
       isNaN(parsedInput)
-        ? reject('Error!!! The input provided if of the wrong type. Terminating ...')
+        ? reject('Error!!! The input provided is of the wrong type. Terminating ...')
         : resolve(parsedInput);
 
       rl.close();
